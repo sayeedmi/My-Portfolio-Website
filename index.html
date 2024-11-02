@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Sayeed's Portfolio</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+	<link rel="stylesheet" href="css/animate.css">
+
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+
+	<link rel="stylesheet" href="css/aos.css">
+
+	<link rel="stylesheet" href="css/ionicons.min.css">
+
+	<link rel="stylesheet" href="css/flaticon.css">
+	<link rel="stylesheet" href="css/icomoon.css">
+	<link rel="stylesheet" href="css/style.css">
+
+
+
+	<style>
+		/*======================================
+//--//-->   ABOUT
+======================================*/
+
+		.about-mf .box-shadow-full {
+			padding-top: 4rem;
+			padding-bottom: 4rem;
+		}
+
+		.about-mf .about-img {
+			margin-bottom: 2rem;
+		}
+
+		.about-mf .about-img img {
+			margin-left: 10px;
+		}
+
+
+		.skill-mf .progress {
+			/* background-color: #cde1f8; */
+			margin: .5rem 0 1.2rem 0;
+			border-radius: 0;
+			height: .7rem;
+		}
+
+		.skill-mf .progress .progress-bar {
+			height: .7rem;
+			background-color: #ffbd39;
+		}
+
+
+		/* Animation styles */
+		#typing-animation {
+			position: relative;
+			font-size: 30px;
+			font-weight: bold;
+			color: rgb(255, 255, 255);
+			overflow: hidden;
+			white-space: nowrap;
+			animation: typing 3s steps(20, end) infinite;
+		}
+
+		#typing-animation:before {
+			content: "";
+			/* position: absolute; */
+			top: 0;
+			left: 0;
+			width: 0;
+			height: 100%;
+			background-color: #ccc;
+			animation: typing-cursor 0.5s ease-in-out infinite;
+		}
+
+		@keyframes typing {
+			from {
+				width: 0;
+			}
+
+			to {
+				width: 100%;
+			}
+		}
+
+		@keyframes typing-cursor {
+			from {
+				width: 5px;
+			}
+
+			to {
+				width: 0;
+			}
+		}
+
+
+		/* project image zoom effect */
+
+		.zoom-effect {
+			overflow: hidden;
+			transition: transform 0.3s ease-out;
+		}
+
+		.zoom-effect:hover {
+			transform: scale(1.1);
+		}
+	</style>
+
+
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+
+	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+		<div class="container">
+			<a class="navbar-brand" href="index.html">Sayeed Ibrahim</a>
+			<button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse"
+				data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="oi oi-menu"></span> Menu
+			</button>
+
+			<div class="collapse navbar-collapse" id="ftco-nav">
+				<ul class="navbar-nav nav ml-auto">
+					<li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+					<li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+					<li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+					<li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+					<li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<section id="home-section" class="hero">
+		<div class="home-slider  owl-carousel">
+			<div class="slider-item ">
+				<div class="overlay"></div>
+				<div class="container">
+					<div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end"
+						data-scrollax-parent="true">
+						<div class="one-third js-fullheight order-md-last img"
+							style="background-image:url(images/bg_1.png);">
+							<div class="overlay"></div>
+						</div>
+						<div class="one-forth d-flex  align-items-center ftco-animate"
+							data-scrollax=" properties: { translateY: '70%' }">
+							<div class="text">
+								<span class="subheading">Hello Everyone!</span>
+								<h1 class="mb-4 mt-3">I'm <span>Sayeed Ibrahim</span></h1>
+
+								<!-- Element to contain animated typing -->
+								<span id="typing-animation"></span>
+
+								<script>
+
+									// Initialize the typing animation
+									const typingAnimationElement = document.getElementById('typing-animation');
+
+									// Create an array of typing text
+									const typingTexts = [
+										'A Student    ',
+										'A Tech Enthusiast    ',
+										'A Hardcore Linux User    ',
+									];
+
+									// Create a function to display the typing animation for a given text
+									function playTypingAnimation(text) {
+										// Loop through each character and add it to the element
+										for (let i = 0; i < text.length; i++) {
+											setTimeout(() => {
+												typingAnimationElement.textContent += text[i];
+											}, i * 200); // Increase the delay to slow down the typing animation
+										}
+
+										// Once the animation is complete, reset the text and start over
+										setTimeout(() => {
+											typingAnimationElement.textContent = '';
+											playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+										}, text.length * 200);
+									}
+
+									// Start the typing animation loop
+									playTypingAnimation(typingTexts[0]);
+
+								</script>
+
+								<br>
+								<br>
+								<h2> > Youth Volunteer Captain</h2>
+								<h2> > Rover Scout</h2>
+								<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+								<!-- <br> -->
+								<p>
+									<!-- <a href="https://www.youtube.com/@sayeed395" class="btn btn-primary py-3 px-4">YouTube</a>  -->
+									<a href="https://www.linkedin.com/in/sayeedmi/"
+										class="btn btn-white btn-outline-white py-3 px-4">Connect With Me</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+	<section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+		<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+					<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+										<div class="about-img">
+											<img src="images/about-me.jpg" class="img-fluid rounded b-shadow-a"
+												alt="Sayeed's Image">
+										</div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+										<div class="about-info">
+											<p><span class="title-s">Name: </span> <span>Sayeed Ibrahim</span></p>
+											<p><span class="title-s">Profession: </span> <span>Student</span></p>
+											<!-- <p><span class="title-s">Experience: </span> <span></span></p> -->
+											<p><span class="title-s">Address: </span> <span>Chittagong,
+													Bangladesh</span></p>
+										</div>
+									</div>
+								</div>
+
+								<div class="skill-mf">
+									<br>
+									<p class="title-s">My High School Final Result:</p>
+
+									<span>Information &amp; Communication Technology - </span> <span
+										class="pull-right">100%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 100%"
+											aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+
+									<span>Statistics - </span> <span class="pull-right">95%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 95%;"
+											aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+
+									<span>English - </span> <span class="pull-right">86%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 86%;"
+											aria-valuenow="86" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+
+									<span>Finance, Banking &amp; Insurance - </span> <span
+										class="pull-right">82.5%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 82.5%"
+											aria-valuenow="82.5" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+
+									<span>Bangla - </span> <span class="pull-right">77%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 77%;"
+											aria-valuenow="77" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+
+									<span>Business Organization &amp; Management - </span> <span
+										class="pull-right">74.5%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 74.5%"
+											aria-valuenow="74.5" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+
+									<span>Accounting - </span> <span class="pull-right">70%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 70%"
+											aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+
+								<p>Hi Everyone! I am Sayeed Mohammed Ibrahim from Chittagong, Bangladesh. I believe in
+									the power of learning and giving back to the community. Throughout school, I was
+									fortunate to achieve a perfect GPA of 5 out of 5 and I discovered a love for
+									subjects like Finance, ICT, Statistics, and English, which have helped shape my path
+									forward. <br><br>
+
+									Technology is a passion of mine, especially programming and problem-solving. I was
+									thrilled to be a regional champion and a national finalist in the ICT Olympiad
+									Bangladesh, where I got to push my skills to the limit. I enjoy coding in languages
+									like Python and Java and exploring web development as I work toward bigger goals in
+									Technology. <br><br>
+
+									Outside of my academics, I have had some great opportunities to serve. As a Rover
+									Scout in the Bangladesh Scouts and a Senior Volunteer with the Bangladesh Red
+									Crescent Society, I have supported community initiatives and had experiences that
+									have taught me leadership, resilience, and compassion. <br><br>
+
+									I am passionate about education and giving back to the community. As a consequence,
+									I run a coaching center, where I teach Mathematics and English to young students. I
+									love watching them grow. I also love taking pictures of nature. Besides, I have a
+									mini flower garden. I spend my leisure time doing these tasks.</p>
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<!-- <li class="d-flex"><span>Profile:</span> <span>&amp; </span></li> -->
+									<li class="d-flex"><span>Domain:</span> <span>Technology, Business &amp;
+											Economics</span></li>
+									<li class="d-flex"><span>Education:</span> <span>Higher Secondary Education with a
+											perfect GPA 5.0</span></li>
+									<li class="d-flex"><span>Language:</span> <span>Bengali, English, Hindi</span></li>
+									<!-- <li class="d-flex"><span>Hard Skills:</span> <span> &amp; </span></li> -->
+									<!-- <li class="d-flex"><span>Soft Skills:</span> <span> &amp; </span></li> -->
+									<li class="d-flex"><span>Interest:</span> <span>Community Service, Book Reading,
+											Photography, Teaching</span></li>
+
+								</ul>
+							</div>
+						</div>
+
+
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<p class="mb-4">
+									<span class="number" data-number="4">0</span> <span>+</span>
+									<span>&nbsp; Projects completed</span>
+								</p>
+								<p><a href="https://www.linkedin.com/in/sayeedmi/"
+										class="btn btn-primary py-3 px-3">LinkedIn</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+
+	<section class="ftco-section ftco-no-pb" id="resume-section">
+		<div class="container">
+			<div class="row justify-content-center pb-5">
+				<div class="col-md-10 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Resume</h1>
+					<h2 class="mb-4">Resume</h2>
+					<p>Seasoned Senior Data Analyst with 5+ years of experience driving business strategies through
+						data-driven insights. Proven expertise in data science, statistical analysis, machine learning
+						algorithms and project management.</p>
+				</div>
+			</div>
+
+			<div class="row">
+				<h1 class="big-4">Experience</h1>
+				<div class="underline"></div>
+			</div>
+			<br>
+
+			<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2023-2024</span>
+						<h2>Youth Volunteer Captain</h2>
+						<span class="position">Bangladesh Red Crescent Society</span>
+						<p class="mt-4">Since 2022, I have diligently volunteered for the Red Crescent Youth. My hard
+							work and dedication paid off, and I became a Youth Volunteer Captain last year. As a Youth
+							Volunteer Captain, I led various teams of volunteers and had many responsibilities,
+							including conducting safety workshops and advocating for community well-being. These
+							experiences have enhanced my leadership, organizational, and collaboration skills, allowing
+							me to make a meaningful impact on our community.
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2022-Present</span>
+						<h2>Rover Scout</h2>
+						<span class="position">Bangladesh Scouts</span>
+						<p class="mt-4">As a Rover Scout in Bangladesh Scouts, I have diligently participated in various
+							community service initiatives and skill-building activities. I have led teams in organizing
+							camps and environmental projects, including tree planting and waste management. Moreover, I
+							mentored younger scouts and taught them essential survival skills, leadership qualities, and
+							teamwork. My role has strengthened my problem-solving abilities and commitment to making a
+							positive impact on our society.
+						</p>
+					</div>
+
+				</div>
+			</div>
+
+			<br>
+			<br>
+
+			<div class="row">
+				<h1 class="big-4">Education</h1>
+				<div class="underline"></div>
+			</div>
+			<br>
+
+			<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2022-2023</span>
+						<h2>Higher Secondary Education</h2>
+						<span class="position">Government College of Commerce</span>
+						<p class="mt-4">Grade: A+ (5.00/5.00)</p>
+					</div>
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2019-2021</span>
+						<h2>Secondary Education</h2>
+						<span class="position">Ukhia Government High School</span>
+						<p class="mt-4">Grade: A (4.78/5.00)</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<h1 class="big-4">Achievements</h1>
+				<div class="underline"></div>
+			</div>
+			<br>
+
+			<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2023</span>
+						<ul>
+							<li><h2>Regional Champion</h2></li>
+							<li><h2>National Finalist</h2></li>
+						</ul>
+						<span class="position">ICT Olympiad Bangladesh</span>
+						<p class="mt-4">In the ICT Olympiad Bangladesh, I secured the 1st rank in our Chittagong region. After that, I qualified for the national final round (Gala Round). Only 20 students qualified for the final round where I ranked 6th among them. This achievement reflects my commitment to excellence and passion for advancing in the realm of the Information and Communication Technology field.</p>
+					</div>
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2019</span>
+						<h2>"A+" Certification in National Skill Standard Basic Course Examination</h2>
+						<span class="position">Bangladesh Technical Education Board, Dhaka</span>
+						<p class="mt-4">I am skilled in Computer Office Applications with a solid background from the National Standard Basic course, I earned an "A+" certification after six months of dedicated learning. I am proficient in office software, demonstrating my competence in leveraging technology for effective office applications. Skills: - Computer Fundamentals - Microsoft and Google Office Applications - Basic Concept of Computer Science - Computer Networking & Hardware Basics</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<h1 class="big-4">Courses &amp; Certificates</h1>
+				<div class="underline"></div>
+			</div>
+			<br>
+
+			<div class="row d-flex">
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://courses.minnalearn.com/en/courses/startingup/" class="block-20"
+							style="background-image: url('images/starting-up-dashboard.png');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a href="https://courses.minnalearn.com/en/courses/startingup/">Starting Up</a></h3>
+							<h6 style="color: white;">Aalto University and Minnalearn</h6>
+							<br>
+							<p>
+								<a href="my-certs/Aalto_University-StartingUp-Course-Certificate.png"
+									class="btn btn-white px-3" target="_blank">See Certificate</a>
+							</p>
+							<p>I learned how to think like an entrepreneur and learned how to solve real-world problems by creating something new. In addition, I gained knowledge of the fundamentals of startup entrepreneurship, company building, and how to develop new products with real-life examples from successful entrepreneurs. Skills: - Problem Solving - Critical Thinking - Strategic Planning - Strategic Thinking - Communication - Research Skills - Business Analysis - Project Management</p>
+							
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://www.futurelearn.com/courses/computer-programming-for-everyone" class="block-20"
+							style="background-image: url('images/cs-for-everyone.png');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a href="https://www.futurelearn.com/courses/computer-programming-for-everyone">Computer Programming for Everyone</a>
+							</h3>
+							<h6 style="color: white;">University of Leeds, UK and Futurelearn</h6>
+							<br>
+							<p>
+								<a href="my-certs/University-of-Leeds_Computer-Programming-for-Everyone_Certificate.pdf"
+									class="btn btn-white px-3" target="_blank">See Certificate</a>
+							</p>
+							<p>In this course, I discovered how and why people program computers, and the problems computers can solve. I explored the different types of coding language and I implemented the key principles I learned in the coding project. Skills: - Programming Fundamentals - Problem-Solving with Code - Algorithmic Thinking - Software Development Concepts</p>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://www.open.edu/openlearn/mod/oucontent/view.php?id=80038" class="block-20"
+							style="background-image: url('images/cyber-sec.png');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a href="https://www.open.edu/openlearn/mod/oucontent/view.php?id=80038">Introduction to Cyber Security: Stay Safe Online</a>
+							</h3>
+							<h6 style="color: white;">The Open University, UK</h6>
+							<br>
+							<p>
+								<a href="my-certs/The-Open-University-UK_Cyber-Security_Certificate.pdf"
+									class="btn btn-white px-3" target="_blank">See Certificate</a>
+							</p>
+							<p>This course helped me understand online security and start protecting my digital life at home or work. I learned how to recognize threats that could harm me online and the steps I can take to reduce the chances of them happening to me. Skills: - Cybersecurity Fundamentals - Threat Identification - Risk Assessment - Digital Safety Practices - Online Security Tools - Data Privacy - Password Management - Phishing Detection - Malware Awareness</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://www.coursera.org/learn/programming-with-javascript" class="block-20"
+							style="background-image: url('images/meta-js.png');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a href="https://www.coursera.org/learn/programming-with-javascript">Programming with Javascript</a>
+							</h3>
+							<h6 style="color: white;">Meta (Facebook) and Coursera</h6>
+							<br>
+							<p>
+								<a href="my-certs/Meta_Programming-with-Javascript_Certificate.pdf"
+									class="btn btn-white px-3" target="_blank">See Certificate</a>
+							</p>
+							<p>JavaScript is the programming language that powers the modern web. In this course, I learned the basic concepts of web development with JavaScript. Now, I can work with functions, objects, arrays, variables, data types, the HTML DOM, and much more. I know how to use JavaScript and discover interactive possibilities with modern JavaScript technologies. Finally, I learned about the practice of testing code and how to write a unit test using Jest.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://www.coursera.org/learn/introduction-git-github" class="block-20"
+							style="background-image: url('images/google-git.png');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a href="https://www.coursera.org/learn/introduction-git-github">Introduction to Git and GitHub</a>
+							</h3>
+							<h6 style="color: white;">Google and Coursera</h6>
+							<br>
+							<p>
+								<a href="my-certs/Google_Git_and_GitHub_Course_Certificate.pdf"
+									class="btn btn-white px-3" target="_blank">See Certificate</a>
+							</p>
+							<p>In this course, I have learned how to keep track of the different versions of my code and configuration files using a popular version control system (VCS) called Git. I have also learned how to set up an account with a service called GitHub so that I can create my very own remote repositories to store my code and configuration.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://www.netacad.com/courses/linux-unhatched?courseLang=en-US" class="block-20"
+							style="background-image: url('images/ndg-linux.png');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a href="https://www.netacad.com/courses/linux-unhatched?courseLang=en-US">NDG Linux Unhatched</a>
+							</h3>
+							<h6 style="color: white;">Network Development Group and Cisco</h6>
+							<br>
+							<p>
+								<a href="my-certs/NDG_Linux_Unhatched-Course-Certificate.pdf"
+									class="btn btn-white px-3" target="_blank">See Certificate</a>
+							</p>
+							<p>In this course, I gained knowledge of Linux fundamentals, Open source methodology, Command Line Interface (CLI), and a basic understanding of BASH scripting.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://java-programming.mooc.fi/" class="block-20"
+							style="background-image: url('images/mooc-java.png');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a href="https://java-programming.mooc.fi/">Java Programming I</a>
+							</h3>
+							<h6 style="color: white;">University of Helsinki, Finland</h6>
+							<br>
+							<p>
+								<a href="my-certs/University_of_Helsinki-Java_Programming_I-Course-Certificate.png"
+									class="btn btn-white px-3" target="_blank">See Certificate</a>
+							</p>
+							<p>During this course, I learned the basics of computer programming, along with algorithms and object-oriented programming through the Java programming language. The course includes comprehensive materials and plenty of programming exercises which are tested using their automatic testing service Test My Code. They use industry-grade tooling from day one. As such, the course is about programming in a real integrated development environment (IDE) instead of a browser or an educational IDE.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<br>
+
+			<div class="row justify-content-center mt-5">
+				<div class="col-md-6 text-center ftco-animate">
+					<p><a href="#" class="btn btn-primary py-4 px-5">Download CV</a></p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+	<section class="ftco-section" id="project-section">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-5">
+				<div class="col-md-7 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Projects</h1>
+					<h2 class="mb-4">Projects</h2>
+					<p>Some of my projects listed bellow.</p>
+				</div>
+			</div>
+			<div class="row d-flex">
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://sayeedmi.github.io/panda-commerce/" class="block-20 zoom-effect"
+							style="background-image: url('images/panda-commerce.png');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a href="https://github.com/sayeedmi/panda-commerce/">An E-Commerce
+									Store</a></h3>
+							<p>I made this e-commerce website for those who want to sell everything. In this website I
+								used HTML, CSS, and Bootstrap.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://sayeedmi.github.io/e-school/" class="block-20 zoom-effect"
+							style="background-image: url('images/e-school.png');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a href="https://github.com/sayeedmi/e-school/">An Ed-Tech Platform</a>
+							</h3>
+							<p>I made this Ed-Tech website for those who want to teach online with easy and reliable
+								way. In this website I used HTML, CSS, and Bootstrap.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry">
+						<a href="https://sayeedmi.github.io/leader-board/" class="block-20 zoom-effect"
+							style="background-image: url('images/leader-board.png');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a href="https://github.com/sayeedmi/leader-board">A Blogging
+									Website</a></h3>
+							<p>This website provides blogs, online courses to the audience. I made this website using
+								HTML, CSS, and Bootstrap.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<br>
+			<!-- added justify-content-center to center align the last two projects -->
+			<div class="row d-flex justify-content-center">
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://sayeedmi.github.io/hot-gadgets/" class="block-20 zoom-effect"
+							style="background-image: url('images/hot-gadgets.png');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a href="https://github.com/sayeedmi/hot-gadgets">An Online Electronic Gadgets
+									Shop</a></h3>
+							<p>This is an electronic gadgets webiste that sell electronic gadgets like laptop, tablet,
+								smartphone, etc. I made this website using HTML, CSS, and Bootstrap.</p>
+						</div>
+					</div>
+				</div>
+				<!-- <div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/sayeedmi/" class="block-20 zoom-effect" style="background-image: url('images/proj_5.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/sayeedmi/">Customer Segmentation using clustering model</a></h3>
+				  <p>Developed a ML model to give various recommendations of financial products &amp; services on target customer groups.</p>
+				</div>
+			  </div>
+			</div> -->
+			</div>
+		</div>
+	</section>
+
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+		<!-- <div class="container">
+		<div class="row d-md-flex align-items-center">
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="20">0</strong>
+                <span>Achievements</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="30">0</strong>
+                <span>Projects</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="1000">0</strong>
+                <span>Mentored Students</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="500">0</strong>
+                <span>Cups of coffee</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+		<div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+			<!-- <div class="container"> -->
+			<div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<h2>More projects on<span> Github </span> </h2>
+					<div class="heading">
+						<h4> I love to solve real world problems &amp; explore new technologies </h4>
+						<br>
+						<p><a href="https://github.com/sayeedmi" class="btn btn-primary py-3 px-5">GitHub</a></p>
+					</div>
+				</div>
+			</div>
+			<!-- </div> -->
+		</div>
+	</section>
+
+
+
+	<section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-3">
+				<div class="col-md-7 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Contact</h1>
+					<h2 class="mb-4">Contact Me</h2>
+					<p>Below are the details to reach out to me!</p>
+				</div>
+			</div>
+
+			<div class="row d-flex contact-info mb-5">
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-map-signs"></span>
+						</div>
+						<h3 class="mb-4">Address</h3>
+						<p>Cox's Bazar, Chittagong, Bangladesh</p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-phone2"></span>
+						</div>
+						<h3 class="mb-4">Contact Number</h3>
+						<p><a href="tel://01537495247">+8801537495247</a></p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-paper-plane"></span>
+						</div>
+						<h3 class="mb-4">Email Address</h3>
+						<p><a href="mailto:sayeedmi@outlook.com">sayeedmi@outlook.com</a></p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-globe"></span>
+						</div>
+						<h3 class="mb-4">Download Resume</h3>
+						<p><a href="#">resumelink</a></p>
+					</div>
+				</div>
+
+				<div class="container">
+					<br>
+					<br>
+					<div class="row justify-content-center">
+						<div class="col-md-7 ftco-animate text-center">
+							<h2>Have a<span> Question? </span> <a href="#" class="btn btn-primary py-3 px-5">Click
+									Here</a> </h2>
+						</div>
+					</div>
+					<br>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+						<li class="ftco-animate normal-txt">Find me on </li>
+						<!-- <li class="ftco-animate"><a href="https://www.youtube.com/@sayeed395"><span class="icon-youtube"></span></a></li> -->
+						<li class="ftco-animate"><a href="https://www.linkedin.com/in/sayeedmi/"><span
+									class="icon-linkedin"></span></a></li>
+						<li class="ftco-animate"><a href="https://x.com/SayeedIbrahim17"><span
+									class="icon-twitter"></span></a></li>
+						<!-- <li class="ftco-animate"><a href="https://x.com/SayeedIbrahim17"><span class="icon-facebook"></span></a></li> -->
+						<!-- <li class="ftco-animate"><a href="https://www.instagram.com/im_sayeed_7/"><span class="icon-instagram"></span></a></li> -->
+					</ul>
+					<br>
+				</div>
+			</div>
+	</section>
+
+
+
+
+	<footer class="ftco-footer ftco-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<p>I'm Sayeed Mohammed Ibrahim.</p>
+					<p>I made this website with the help of <a href="https://colorlib.com" target="_blank">Colorlib's templates</a> </p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+	<!-- loader -->
+	<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+			<circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+			<circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+				stroke="#F96D00" />
+		</svg></div>
+
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery-migrate-3.0.1.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="js/jquery.stellar.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/aos.js"></script>
+	<script src="js/jquery.animateNumber.min.js"></script>
+	<script src="js/scrollax.min.js"></script>
+
+	<script src="js/main.js"></script>
+
+</body>
+
+</html>
