@@ -4,11 +4,15 @@ Welcome to my personal portfolio website! This website showcases my skills, expe
 
 ## Website Sections
 
-- **About Me**: A brief introduction to my background, academic interests, and goals.
-- **Photography**: A gallery of my photography work, highlighting some of my best shots.
-- **Extracurricular Activities**: Information about my involvement in scouting, volunteer roles, and leadership positions.
-- **Achievements**: A display of my academic and extracurricular achievements, including awards and recognitions.
-- **Online Courses & Certificates**: A list of online courses I've completed, with certificates in programming, technology, and related fields.
+- **Home**: Some animations with my pictures.
+- **About**: A brief introduction to my background, academic interests, and goals.
+- **Resume**: Information about my involvement in scouting, volunteer roles, and leadership positions.
+    - **Experience**:
+    - **Education**:
+    - **Achievements**:
+    - **Courses & Certificates**:
+- **Projects**: A display of my created projects.
+- **Contact**: A list of online courses I've completed, with certificates in programming, technology, and related fields.
 
 ## Technologies Used
 
