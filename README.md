@@ -5,19 +5,19 @@ Welcome to my personal portfolio website! This website showcases my skills, expe
 ## Website Sections
 
 - **Home**: Some animations with my pictures.
-- **About**: A brief introduction to my background, academic interests, and goals.
+- **About**: A brief introduction to my background, academic interests, goals and my final exam results.
 - **Resume**: Information about my involvement in scouting, volunteer roles, and leadership positions.
-    - **Experience**:
-    - **Education**:
-    - **Achievements**:
-    - **Courses & Certificates**:
+    - **Experience**: My voluntery experiences.
+    - **Education**: My educational background.
+    - **Achievements**: My achievements.
+    - **Courses & Certificates**: My completed online courses and certificates.
 - **Projects**: A display of my created projects.
 - **Contact**: A list of online courses I've completed, with certificates in programming, technology, and related fields.
 
 ## Technologies Used
 
 - **Frontend**: HTML, CSS, JavaScript, SCSS
-- **Hosting**: GitHub Pages, Vercel, or similar platforms
+- **Hosting**: Netlify 
 
 ## Contact
 
